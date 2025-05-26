@@ -11,8 +11,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <30 31 32 33 39 40 41 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+            tapping-term-ms = <250>;
+            hold-trigger-key-positions = <30 31 32 33 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
         };
 
         hmr: homewrow_mods_right {
@@ -21,8 +24,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            tapping-term-ms = <250>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
+            flavor = "balanced";
         };
 
         sys_layer: sys_layer {
@@ -39,7 +45,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        Default {
             bindings = <
 &kp ESCAPE  &kp SQT          &kp COMMA        &kp PERIOD         &kp P                &kp Y                 &kp F            &kp G                 &kp C               &kp R             &kp L             &kp MINUS
 &kp TAB     &hml LEFT_GUI A  &hml LEFT_ALT O  &hml LEFT_SHIFT E  &hml LEFT_CONTROL U  &kp I                 &kp D            &hmr RIGHT_CONTROL H  &hmr RIGHT_SHIFT T  &hmr RIGHT_ALT N  &hmr RIGHT_GUI S  &kp ENTER
